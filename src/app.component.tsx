@@ -23,7 +23,7 @@ export class AppComponent extends PureComponent {
 
   render() {
     return (
-      <div className="w-100 h-100">
+      <div>
         <Routes>
           {this.getRoutes(portfolioRoutes)}
         </Routes>
