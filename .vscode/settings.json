@@ -1,0 +1,10 @@
+{
+    "editor.fontSize": 14,
+    "files.insertFinalNewline": true,
+    "editor.tabSize": 2,
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true,
+        "source.organizeImports": true
+    },
+}
