@@ -9,6 +9,7 @@
       "esnext"
     ],
     "allowJs": true,
+    "noUnusedParameters": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
@@ -21,20 +22,20 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "noImplicitAny": true,
+    "noImplicitAny": false,
     "downlevelIteration": true,
     "paths": {
       "@portfolio/component":[
         "components/public_api.ts"
+      ],
+      "@portfolio/pages":[
+        "pages/portfolio/public_api.ts"
       ],
       "@portfolio/common":[
         "common/public_api.ts"
       ],
       "@portfolio/routes":[
         "routes/public_api.ts"
-      ],
-      "@portfolio/pages":[
-        "pages/zuava/public_api.ts"
       ]
     }
   },

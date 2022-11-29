@@ -1,0 +1,12 @@
+.about_component__info_text {
+  min-width: 120px;
+}
+
+.about_component__service__card_container {
+  border-top: 4px #e4e4e4 solid !important;
+  transition: all 0.4s ease-out !important;
+}
+
+.about_component__service__card_container:hover {
+  border-top: 4px #037fff solid !important;
+}

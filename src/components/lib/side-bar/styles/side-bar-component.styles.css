@@ -1,0 +1,35 @@
+.side-bar-ham-burger__transition-button {
+  transition: all 0.4s ease-out !important;
+  top: 20px;
+}
+
+.side-bar-ham-burger__transform-right {
+  transform: translateX(224px);
+}
+
+.side-bar-ham-burger__transform-left {
+  transform: translateX(-7px);
+}
+
+.side-bar__paper {
+  transition: transform 0.4s ease-out 0ms !important;
+  background: #e4e4e4 !important;
+}
+
+.side_drawer__avatar {
+  width: 205px !important;
+  height: 205px !important;
+  border: 0.5rem solid #cbced8;
+}
+
+@media screen and (min-width: 960px) {
+  .side_drawer__avatar {
+    width: 215px !important;
+    height: 215px !important;
+  }
+}
+@media screen and (min-width: 600px) {
+  .side-bar-ham-burger__transform-right {
+    transform: translateX(244px);
+  }
+}

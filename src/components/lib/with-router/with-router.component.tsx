@@ -4,13 +4,17 @@ import { useLocation, useNavigate, useParams } from 'react-router-dom';
 function withRouterComponent(Component: any) {
   function ComponentWithRouterProp(props: any) {
     const location = useLocation();
-    const navigate = useNavigate();
     const params = useParams();
+    const navigate = useNavigate();
+    const navigateTo = (to: any) => {
+      navigate(to);
+    };
     return (
       <Component
-        // eslint-disable-next-line react/jsx-props-no-spreading
         {...props}
-        router={{ location, navigate, params }}
+        router={{
+          location, navigate: navigateTo, params,
+        }}
       />
     );
   }

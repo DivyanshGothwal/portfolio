@@ -1,0 +1,27 @@
+.header_component__linear_progress_bar {
+  height: 5px;
+  width: 25%;
+}
+
+.header_component__root {
+  margin-bottom: 40px !important;
+  padding-bottom: 20px !important;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .header_component__linear_progress_bar {
+    width: 20%;
+  }
+  .header_component__root {
+    margin-bottom: 50px !important;
+  }
+}
+
+@media only screen and (min-width: 991px) {
+  .header_component__linear_progress_bar {
+    width: 15%;
+  }
+  .header_component__root {
+    margin-bottom: 60px !important;
+  }
+}

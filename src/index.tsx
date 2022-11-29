@@ -1,4 +1,3 @@
-
 import { AppComponent } from 'app.component';
 import React from 'react';
 import { render } from 'react-dom';
@@ -13,6 +12,5 @@ render((
       <AppComponent />
     </BrowserRouter>
   </React.StrictMode>), rootElement);
+
 reportWebVitals();
-
-

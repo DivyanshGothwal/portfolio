@@ -1,60 +1,66 @@
 import { PortfolioRoutes } from '@portfolio/common';
 import { NotFoundComponent } from '@portfolio/component';
-import { ClientContainer } from '../../pages/portfolio/lib/fragmants/src/client/client.container';
-import { TravellerContainer } from '../../pages/portfolio/lib/fragmants/src/traveller/traveller.container';
-import { PortfolioPageContainer } from '../../pages/portfolio/lib/portfolio.page.container';
-import { routeConstatnt } from './route.constants';
+import { AboutContainer, BlogsContainer, ContactMeContainer, HomeContainer, PortfolioPageContainer, ResumeContainer } from '@portfolio/pages';
+import { routeConstant } from './route.constants';
 
 export const portfolioRoutes: PortfolioRoutes[] = [
   {
-    path: routeConstatnt.initialHome.path,
-    id: routeConstatnt.initialHome.id,
-    key: routeConstatnt.initialHome.id,
-    title: routeConstatnt.initialHome.title,
+    path: routeConstant.initialHome.path,
+    id: routeConstant.initialHome.id,
+    key: routeConstant.initialHome.id,
+    title: routeConstant.initialHome.title,
     element: PortfolioPageContainer,
     childRoutes: [
       {
-        path: routeConstatnt.portfolios.path,
-        id: routeConstatnt.portfolios.id,
-        key: routeConstatnt.portfolios.id,
-        title: routeConstatnt.portfolios.title,
-        element: PortfolioPageContainer,
+        path: routeConstant.home.path,
+        id: routeConstant.home.id,
+        key: routeConstant.home.id,
+        title: routeConstant.home.title,
+        element: HomeContainer,
       },
       {
-        path: routeConstatnt.home.path,
-        id: routeConstatnt.home.id,
-        key: routeConstatnt.home.id,
-        title: routeConstatnt.home.title,
-        element: ClientContainer,
+        path: routeConstant.about.path,
+        id: routeConstant.about.id,
+        key: routeConstant.about.id,
+        title: routeConstant.about.title,
+        element: AboutContainer,
       },
       {
-        path: routeConstatnt.about.path,
-        id: routeConstatnt.about.id,
-        key: routeConstatnt.about.id,
-        title: routeConstatnt.about.title,
-        element: TravellerContainer,
+        path: routeConstant.resume.path,
+        id: routeConstant.resume.id,
+        key: routeConstant.resume.id,
+        title: routeConstant.resume.title,
+        element: ResumeContainer,
       },
+
       {
-        path: routeConstatnt.blogs.path,
-        id: routeConstatnt.blogs.id,
-        key: routeConstatnt.blogs.id,
-        title: routeConstatnt.blogs.title,
-        element: TravellerContainer,
+        path: routeConstant.contact.path,
+        id: routeConstant.contact.id,
+        key: routeConstant.contact.id,
+        title: routeConstant.contact.title,
+        element: ContactMeContainer,
       },
+      // {
+      //   path: routeConstant.projects.path,
+      //   id: routeConstant.projects.id,
+      //   key: routeConstant.projects.id,
+      //   title: routeConstant.projects.title,
+      //   element: AboutContainer,
+      // },
       {
-        path: routeConstatnt.resume.path,
-        id: routeConstatnt.resume.id,
-        key: routeConstatnt.resume.id,
-        title: routeConstatnt.resume.title,
-        element: TravellerContainer,
-      },
-      {
-        path: routeConstatnt.default.path,
-        id: routeConstatnt.default.id,
-        key: routeConstatnt.default.id,
-        title: routeConstatnt.default.title,
-        element: NotFoundComponent,
+        path: routeConstant.blogs.path,
+        id: routeConstant.blogs.id,
+        key: routeConstant.blogs.id,
+        title: routeConstant.blogs.title,
+        element: BlogsContainer,
       },
     ],
+  },
+  {
+    path: routeConstant.default.path,
+    id: routeConstant.default.id,
+    key: routeConstant.default.id,
+    title: routeConstant.default.title,
+    element: NotFoundComponent,
   },
 ];

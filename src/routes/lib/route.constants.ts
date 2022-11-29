@@ -1,4 +1,4 @@
-export const routeConstatnt = {
+export const routeConstant = {
   initialHome: {
     id: 'portfolio',
     path: '/',
@@ -7,27 +7,32 @@ export const routeConstatnt = {
   home: {
     id: 'home',
     path: 'home',
-    title: 'home',
+    title: 'Home',
   },
   about: {
     id: 'about',
     path: 'about',
-    title: 'about',
+    title: 'About',
   },
   resume: {
     id: 'resume',
     path: 'resume',
-    title: 'resume',
+    title: 'Resume',
   },
-  portfolios: {
-    id: 'portfolios',
-    path: 'portfolios',
-    title: 'portfolios',
-  },
+  // projects: {
+  //   id: 'projects',
+  //   path: 'projects',
+  //   title: 'Projects',
+  // },
   blogs: {
     id: 'blogs',
     path: 'blogs',
-    title: 'blogs',
+    title: 'Blogs',
+  },
+  contact: {
+    id: 'contact',
+    path: 'contact',
+    title: 'Contact Me',
   },
   default: {
     id: 'default',
