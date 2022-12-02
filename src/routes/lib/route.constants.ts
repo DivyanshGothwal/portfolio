@@ -1,8 +1,8 @@
 export const routeConstant = {
   initialHome: {
     id: 'portfolio',
-    path: '/',
-    title: '',
+    path: 'portfolio',
+    title: 'Divyansh Gothwal',
   },
   home: {
     id: 'home',
@@ -37,6 +37,8 @@ export const routeConstant = {
   default: {
     id: 'default',
     path: '*',
-    title: 'Not Found',
+    title: 'Home',
+    to: 'home',
+    redirect: true,
   },
 };

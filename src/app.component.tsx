@@ -3,36 +3,20 @@ import { useMediaQuery } from '@mui/material';
 import { PortfolioRoutes } from '@portfolio/common';
 import { portfolioRoutes } from '@portfolio/routes';
 import ThemeWrapper from 'components/lib/theme-wrapper/theme-wrapper.component';
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Outlet, Route, Routes } from 'react-router-dom';
 
 export function AppComponent() {
   const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
 
-  console.log(prefersDarkMode);
-
-  const setApplicationTheme = (isDark: boolean) => {
-    console.log('setApplicationTheme', isDark);
-
-    // setTheme({
-    //   palette: {
-    //     mode: isDark ? 'dark' : 'light',
-    //   },
-    // });
-  };
-
-  useEffect(() => {
-    setApplicationTheme(prefersDarkMode);
-  }, [prefersDarkMode]);
-
   const getRoutes = (routes?: PortfolioRoutes[]) => routes
-    ?.map(({ element: Component, key, path, childRoutes }) => (
+    ?.map(({ element: Component, key, path, childRoutes, to }) => (
       <Route
         key={key}
         path={path}
         element={(
           <>
-            <Component setApplicationTheme={setApplicationTheme} />
+            <Component to={to} />
             {childRoutes?.length && <Outlet />}
           </>
         )}

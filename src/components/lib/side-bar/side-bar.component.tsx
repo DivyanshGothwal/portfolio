@@ -85,6 +85,7 @@ function SideBar({
 
   const onSideMenuClicked = useCallback((path) => {
     navigate(path);
+    setOpen(false);
   }, [navigate]);
 
   useEffect(() => {

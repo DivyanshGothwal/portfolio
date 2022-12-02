@@ -1,9 +1,10 @@
 import { Location } from 'history';
+import { NavigateOptions } from 'react-router-dom';
 
 export interface WithRouter {
+  to: string;
   router: {
     location: Location;
-    // eslint-disable-next-line no-unused-vars
-    navigate: (to: string) => void
+    navigate: (to: string, options?: NavigateOptions | undefined) => void
   }
 }

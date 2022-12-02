@@ -33,6 +33,7 @@ class Component extends PureComponent {
               md={6}
               sm={12}
               xs={12}
+              key={content}
             >
               <Card
                 className="blogs_component__card_container"

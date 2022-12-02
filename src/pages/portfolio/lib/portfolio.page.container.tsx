@@ -1,23 +1,42 @@
 import { WithRouter } from '@portfolio/common';
 import { MediaQueryProps, withRouter } from '@portfolio/component';
 import React, { PureComponent } from 'react';
-import { routeConstant } from 'routes/lib/route.constants';
 import { PortfolioComponent } from './portfolio.page.component';
 
 interface PortfolioPageContainerState{
-  test: string;
+  rendered: boolean;
 }
 export interface PortfolioPageContainerProps extends WithRouter, MediaQueryProps {
-  setApplicationTheme: (isDark: boolean) => void;
 }
 
 class Container extends PureComponent<PortfolioPageContainerProps, PortfolioPageContainerState> {
-  render() {
-    const { router: { location: { pathname }, navigate }, setApplicationTheme } = this.props;
-    if (pathname === routeConstant.initialHome.path) {
-      navigate(routeConstant.home.path);
-      setApplicationTheme(true);
+  constructor(props) {
+    super(props);
+    this.state = {
+      rendered: false,
+    };
+  }
+
+  componentDidMount() {
+    this.setState({
+      rendered: true,
+    });
+  }
+
+  componentDidUpdate(_, { rendered: prevRendered }) {
+    const { router: { location: { pathname }, navigate } } = this.props;
+    const pathArray = pathname.split('/');
+    const { rendered } = this.state;
+    if (prevRendered !== rendered
+      && (pathArray.length <= 3
+        && !pathArray?.[0]
+        && !pathArray?.[2])
+    ) {
+      navigate('home');
     }
+  }
+
+  render() {
     return (
       <PortfolioComponent />
     );

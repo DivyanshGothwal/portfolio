@@ -498,6 +498,7 @@
 .fw-900 {
   font-weight: 900 !important;
 }
+
 .border-bottom-solid {
   border-bottom: 1px solid #cbced8;
 }
@@ -535,7 +536,11 @@
 }
 
 .light-color {
-  color: rgba(215, 220, 230, 0.44);
+  color: rgba(215, 220, 230, 0.44) !important;
+}
+
+.bg-light {
+  background-color: #e4e4e4 !important;
 }
 
 .cursor-pointer {

@@ -38,6 +38,7 @@ export function ServicesComponent() {
           md={6}
           sm={6}
           xs={12}
+          key={text}
         >
           <Card
             className="py-2 mb-2 mr-2 about_component__service__card_container"

@@ -1,11 +1,12 @@
-import { Button, CircularProgress, Snackbar, TextField, Typography } from '@material-ui/core';
+import { Button, Card, CardContent, CircularProgress, Snackbar, TextField, Typography } from '@material-ui/core';
 import { Alert } from '@mui/material';
-import { CustomGrid, HeaderComponent } from '@portfolio/component';
+import { CustomGrid, HeaderComponent, MediaQueryProps } from '@portfolio/component';
 import React, { PureComponent } from 'react';
+import { contactMeDetails } from './constants/contact-me.constants';
 // eslint-disable-next-line import/no-cycle
 import { ContactMeComponentState } from './contact-me.container';
 
-interface ContactMeComponentProps extends ContactMeComponentState{
+interface ContactMeComponentProps extends ContactMeComponentState, MediaQueryProps {
   onSendEmail: () => void;
   onChange: (name: string, value: string) => void;
   onCloseSnackbar: () => void;
@@ -16,12 +17,15 @@ export class ContactMeComponent extends PureComponent<ContactMeComponentProps> {
     const {
       onSendEmail, onChange, name, email, message,
       subject, errors, sentStatus, hideSnackbar, onCloseSnackbar,
+      isLarge, isExtraLarge, isMedium,
     } = this.props;
     return (
-      <CustomGrid container>
+      <CustomGrid
+        container
+        className="component__container mx-auto justify-content-center mb-5"
+      >
         <CustomGrid
           container
-          className="component__container mx-auto justify-content-center mb-5"
         >
           <CustomGrid
             item
@@ -112,7 +116,7 @@ export class ContactMeComponent extends PureComponent<ContactMeComponentProps> {
                 minRows="6"
                 maxRows="20"
                 margin="dense"
-                className="mb-3"
+                className="mb-4"
                 value={message}
                 FormHelperTextProps={{
                   error: !!errors?.message,
@@ -175,7 +179,40 @@ export class ContactMeComponent extends PureComponent<ContactMeComponentProps> {
             sm={12}
             md={6}
           >
-            cards
+            {contactMeDetails.map(({ Icon, heading, content1, content2 }) => (
+              <CustomGrid item xs={12} key={content1}>
+                <Card
+                  className={`bg-light ${isLarge || isExtraLarge || isMedium ? 'm-3' : 'my-3 mr-3'} `}
+                  square
+                  elevation={0}
+                >
+                  <CardContent className="d-flex align-items-center">
+                    <div className="p-2 mr-3">
+                      <Icon fontSize="large" />
+                    </div>
+                    <div>
+                      <Typography gutterBottom variant="subtitle1" className="fw-600">
+                        {heading}
+                      </Typography>
+                      <Typography
+                        gutterBottom
+                        variant="subtitle2"
+                      >
+                        {content1}
+                      </Typography>
+                      {content2 && (
+                      <Typography
+                        gutterBottom
+                        variant="subtitle2"
+                      >
+                        {content2}
+                      </Typography>
+                      )}
+                    </div>
+                  </CardContent>
+                </Card>
+              </CustomGrid>
+            ))}
           </CustomGrid>
         </CustomGrid>
       </CustomGrid>

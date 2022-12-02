@@ -2,7 +2,6 @@ import { colors, responsiveFontSizes, ThemeProvider } from '@material-ui/core';
 import { createTheme } from '@material-ui/core/styles';
 import createBreakpoints from '@material-ui/core/styles/createBreakpoints';
 import { CssBaseline } from '@mui/material';
-import { cloneDeep } from 'lodash';
 import React, { memo, useState } from 'react';
 
 interface ThemeWrapperComponentProps {
@@ -36,8 +35,7 @@ const ThemeWrapper = memo((props: ThemeWrapperComponentProps) => {
       fontFamily: 'Nunito, Roboto, sans-serif',
     },
   });
-  console.log(theme);
-  console.log(cloneDeep(createTheme(theme, breakpointsFull)));
+
   return (
     <ThemeProvider theme={responsiveFontSizes(createTheme(theme, breakpointsFull))}>
       <CssBaseline />

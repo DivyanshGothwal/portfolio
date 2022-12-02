@@ -54,6 +54,14 @@ export const portfolioRoutes: PortfolioRoutes[] = [
         title: routeConstant.blogs.title,
         element: BlogsContainer,
       },
+      {
+        path: routeConstant.default.path,
+        id: routeConstant.default.id,
+        key: routeConstant.default.id,
+        title: routeConstant.default.title,
+        to: routeConstant.default.to,
+        element: NotFoundComponent,
+      },
     ],
   },
   {
@@ -61,6 +69,7 @@ export const portfolioRoutes: PortfolioRoutes[] = [
     id: routeConstant.default.id,
     key: routeConstant.default.id,
     title: routeConstant.default.title,
+    to: `${routeConstant.initialHome.path}/${routeConstant.default.to}`,
     element: NotFoundComponent,
   },
 ];

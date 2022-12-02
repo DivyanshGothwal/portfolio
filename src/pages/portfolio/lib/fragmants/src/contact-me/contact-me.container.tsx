@@ -1,4 +1,5 @@
 /* eslint-disable no-useless-escape */
+import { MediaQueryProps, withMediaQueries } from '@portfolio/component';
 import { cloneDeep } from 'lodash';
 import React, { PureComponent } from 'react';
 import { token } from './constants/contact-me.constants';
@@ -15,7 +16,7 @@ export interface ContactMeComponentState {
     hideSnackbar?: boolean;
 }
 
-export class ContactMeContainer extends PureComponent<{}, ContactMeComponentState> {
+class Container extends PureComponent<MediaQueryProps, ContactMeComponentState> {
   constructor(props) {
     super(props);
     this.state = {
@@ -143,6 +144,7 @@ export class ContactMeContainer extends PureComponent<{}, ContactMeComponentStat
     return (
       <ContactMeComponent
         {...this.state}
+        {...this.props}
         onSendEmail={this.onSendEmail}
         onChange={this.onChange}
         onCloseSnackbar={this.onCloseSnackbar}
@@ -151,3 +153,4 @@ export class ContactMeContainer extends PureComponent<{}, ContactMeComponentStat
   }
 }
 
+export const ContactMeContainer = withMediaQueries(Container);

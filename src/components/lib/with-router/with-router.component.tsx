@@ -1,13 +1,13 @@
 import React from 'react';
-import { useLocation, useNavigate, useParams } from 'react-router-dom';
+import { NavigateOptions, useLocation, useNavigate, useParams } from 'react-router-dom';
 
 function withRouterComponent(Component: any) {
   function ComponentWithRouterProp(props: any) {
     const location = useLocation();
     const params = useParams();
     const navigate = useNavigate();
-    const navigateTo = (to: any) => {
-      navigate(to);
+    const navigateTo = (to: string, options?: NavigateOptions | undefined) => {
+      navigate(to, options);
     };
     return (
       <Component
