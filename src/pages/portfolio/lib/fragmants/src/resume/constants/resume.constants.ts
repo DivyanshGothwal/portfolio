@@ -88,7 +88,7 @@ export const qualifications = [
         from: '2017',
         heading: 'Bachelor of Technology',
         subHeading: 'Indian Institute of Technology, Roorkee',
-        about: ['Graduated with and 7.476 CGPA'],
+        about: ['Graduated with an 7.476 CGPA'],
       },
       {
         from: '2012',
@@ -100,7 +100,7 @@ export const qualifications = [
         from: '2010',
         heading: 'Matriculation',
         subHeading: 'Subodh Public School(CBSE), Jaipur, Rajasthan',
-        about: ['Graduated with and 8.40 CGPA'],
+        about: ['Graduated with an 8.40 CGPA'],
       },
     ],
   },
