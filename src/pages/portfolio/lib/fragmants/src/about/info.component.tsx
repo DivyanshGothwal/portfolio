@@ -22,7 +22,7 @@ function Component({ isLarge, isExtraLarge }: InfoComponentProps) {
             value: 50,
           }}
           classes={{
-            root: 'pt-6 mt-6',
+            root: 'pt-6 mt-6 animate__fadeInDown animate__animated ',
           }}
         />
       </CustomGrid>
@@ -43,7 +43,7 @@ function Component({ isLarge, isExtraLarge }: InfoComponentProps) {
         md={12}
         sm={12}
         xs={12}
-        className={`${isLarge || isExtraLarge ? 'pl-3' : ''} mb-3`}
+        className={`${isLarge || isExtraLarge ? 'pl-3' : ''} mb-3 `}
       >
         <CustomGrid className="mb-3">
           <Typography variant="h4" gutterBottom className="fw-600">
@@ -53,8 +53,10 @@ function Component({ isLarge, isExtraLarge }: InfoComponentProps) {
             </Typography>
           </Typography>
           <Typography>
-            I am a frontend web developer. I can provide clean code and pixel perfect design.
-            I also make website more & more interactive with web animations.
+            Passionate full-stack engineer with 5.5+ years of hands-on
+            experience in developing scalable websites/applications using
+            wide range of front-end and back-end skills like HTML, CSS3, JAVA, JavaScript.
+            Developed 8+ application in my experience.
           </Typography>
         </CustomGrid>
         <CustomGrid className="mb-2 d-flex">

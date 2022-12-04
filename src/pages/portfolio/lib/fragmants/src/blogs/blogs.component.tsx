@@ -3,8 +3,13 @@ import { CustomGrid, HeaderComponent } from '@portfolio/component';
 import React, { PureComponent } from 'react';
 import { blogs } from './constants/blogs.constants';
 
-class Component extends PureComponent {
+interface BlogComponentProps {
+  onClickCard: (link: string) => void;
+}
+
+export class BlogsComponent extends PureComponent<BlogComponentProps> {
   render() {
+    const { onClickCard } = this.props;
     return (
       <CustomGrid
         container
@@ -25,7 +30,7 @@ class Component extends PureComponent {
           />
         </CustomGrid>
         <CustomGrid container>
-          {blogs.map(({ heading, imageUrl, postedOn: { date, year, month }, content }) => (
+          {blogs.map(({ heading, imageUrl, link, postedOn: { date, year, month }, content }) => (
             <CustomGrid
               item
               lg={6}
@@ -34,10 +39,12 @@ class Component extends PureComponent {
               sm={12}
               xs={12}
               key={content}
+              className="cursor-pointer"
             >
               <Card
                 className="blogs_component__card_container"
                 square
+                onClick={() => onClickCard(link)}
               >
                 <CardMedia
                   component="img"
@@ -77,4 +84,3 @@ class Component extends PureComponent {
   }
 }
 
-export const BlogsComponent = Component;

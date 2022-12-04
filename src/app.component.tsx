@@ -2,6 +2,7 @@ import { Paper } from '@material-ui/core';
 import { useMediaQuery } from '@mui/material';
 import { PortfolioRoutes } from '@portfolio/common';
 import { portfolioRoutes } from '@portfolio/routes';
+import 'animate.css';
 import ThemeWrapper from 'components/lib/theme-wrapper/theme-wrapper.component';
 import React from 'react';
 import { Outlet, Route, Routes } from 'react-router-dom';

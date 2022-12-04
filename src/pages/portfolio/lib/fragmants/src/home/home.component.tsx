@@ -1,9 +1,10 @@
 import { IconButton, Typography } from '@material-ui/core';
 import FacebookOutlinedIcon from '@mui/icons-material/FacebookOutlined';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import Grid from '@mui/material/Grid';
-import { MediaQueryProps, Particle, withMediaQueries } from '@portfolio/component';
+import { Particle } from '@portfolio/component';
 import React, { PureComponent } from 'react';
 import type { ISourceOptions } from 'tsparticles-engine';
 
@@ -77,11 +78,16 @@ const particleOptions: ISourceOptions = {
   detectRetina: true,
 };
 
-type HomeComponentProp = MediaQueryProps;
+interface HomeComponentProp {
+  onClickFacebook: () =>void;
+  onClickTwitter: () =>void;
+  onClickGithub: () =>void;
+  onClickLinkedIn: () =>void;
+}
 
-class Component extends PureComponent<HomeComponentProp> {
+export class HomeComponent extends PureComponent<HomeComponentProp> {
   render() {
-    const { isSmall } = this.props;
+    const { onClickFacebook, onClickTwitter, onClickGithub, onClickLinkedIn } = this.props;
     return (
       <>
         <Particle
@@ -100,34 +106,61 @@ class Component extends PureComponent<HomeComponentProp> {
               xs={10}
               className="m-auto d-flex flex-column align-items-center justify-content-center"
             >
-              <Typography variant="h3" className="fw-700  text-align-center" gutterBottom>
-                Hi, I am&nbsp;
-                <Typography variant="h3" component="span" color="primary" className="fw-700">
-                  Divyansh Gothwal
+              <div className="">
+                <Typography variant="h3" className="fw-700 animate__animated  animate__zoomInDown  text-align-center" gutterBottom>
+                  Hi, I am&nbsp;
+                  <Typography variant="h3" component="span" color="primary" className="fw-700">
+                    Divyansh Gothwal
+                  </Typography>
                 </Typography>
-              </Typography>
-              <Typography className="text-align-center">
-                I am a frontend web developer. I can provide clean code and pixel perfect design.
-                I also make website more & more interactive with web animations.
-              </Typography>
+                <Typography className="text-align-center animate__animated animate__zoomInDown">
+                  Passionate full-stack engineer with 5.5+ years of hands-on
+                  experience in developing scalable websites/applications using
+                  wide range of front-end and back-end skills like HTML, CSS3, JAVA, JavaScript.
+                  Developed 8+ application in my experience.
+                </Typography>
+              </div>
             </Grid>
             <Grid
               item
               xs={12}
               className="d-flex align-items-center justify-content-center"
             >
-              <IconButton>
+              <IconButton
+                onClick={onClickFacebook}
+                className="animate__animated animate__fadeInUp"
+              >
                 <FacebookOutlinedIcon
                   color="primary"
                   fontSize="large"
-                // fontSize={`${isSmall ? 'inherit' : 'large'}`}
                 />
               </IconButton>
-              <IconButton>
-                <TwitterIcon color="primary" fontSize="large" />
+              <IconButton
+                onClick={onClickTwitter}
+                className="animate__animated animate__fadeInUp"
+              >
+                <TwitterIcon
+                  color="primary"
+                  fontSize="large"
+                />
               </IconButton>
-              <IconButton>
-                <GitHubIcon color="primary" fontSize="large" />
+              <IconButton
+                onClick={onClickGithub}
+                className="animate__animated animate__fadeInUp"
+              >
+                <GitHubIcon
+                  color="primary"
+                  fontSize="large"
+                />
+              </IconButton>
+              <IconButton
+                onClick={onClickLinkedIn}
+                className="animate__animated animate__fadeInUp"
+              >
+                <LinkedInIcon
+                  color="primary"
+                  fontSize="large"
+                />
               </IconButton>
             </Grid>
           </Grid>
@@ -136,5 +169,3 @@ class Component extends PureComponent<HomeComponentProp> {
     );
   }
 }
-
-export const HomeComponent = withMediaQueries(Component);

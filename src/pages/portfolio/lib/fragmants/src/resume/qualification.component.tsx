@@ -6,10 +6,10 @@ import './styles/qualification.styles.css';
 
 interface Information {
     from: string;
-    to: string;
+    to?: string;
     heading: string;
     subHeading: string;
-    about: string;
+    about: string[];
 }
 
 interface QualificationComponentProps {
@@ -54,12 +54,10 @@ export function QualificationComponent({ info }: QualificationComponentProps) {
       activeStep={activeStep}
     >
       {info.map(({ from, to, heading, subHeading, about }, idx) => (
-        <Step key={about}>
+        <Step key={about.join(',')}>
           <StepLabel StepIconComponent={getIconComponent}>
             {from }
-            -
-            {' '}
-            {to}
+            {to ? ` - ${to}` : ''}
             {activeStep !== idx
             && (` - ${subHeading}`)}
           </StepLabel>
@@ -71,7 +69,9 @@ export function QualificationComponent({ info }: QualificationComponentProps) {
               {subHeading}
             </Typography>
             <Typography>
-              {about}
+              {about.map((text) => (
+                <div key={text}>{text}</div>
+              ))}
             </Typography>
           </StepContent>
         </Step>

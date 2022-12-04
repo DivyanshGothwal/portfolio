@@ -30,7 +30,7 @@ export function ServicesComponent() {
         />
       </CustomGrid>
 
-      {services.map(({ text, Icon }) => (
+      {services.map(({ text, Icon, content }) => (
         <CustomGrid
           item
           lg={4}
@@ -54,8 +54,7 @@ export function ServicesComponent() {
               </Typography>
               <Divider className="mb-3 w-20" />
               <Typography variant="body2" color="textSecondary">
-                Lizards are a widespread group of squamate reptiles, with over 6,000
-                species, ranging across all continents except Antarctica
+                {content}
               </Typography>
             </CardContent>
           </Card>

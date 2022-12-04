@@ -7,13 +7,16 @@ export const services = [
   {
     text: 'Web Design',
     Icon: BrushOutlinedIcon,
+    content: 'Desigining websites to pixel perfect design',
   },
   {
     text: 'Web Development',
     Icon: CodeOutlinedIcon,
+    content: 'Designed and multiple apps in my professional experience',
   },
   {
     text: 'Mobile Application',
     Icon: PhoneIphoneOutlinedIcon,
+    content: 'Designed and developed multiple apps in my professional experience',
   },
 ];

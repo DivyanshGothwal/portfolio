@@ -2,10 +2,13 @@ import React, { PureComponent } from 'react';
 import { BlogsComponent } from './blogs.component';
 import './styles/blogs.styles.css';
 
-class Container extends PureComponent {
+export class BlogsContainer extends PureComponent {
+  static onClickCard = (link: string) => {
+    window.open(link, '_blank')?.focus();
+  };
+
   render() {
-    return <BlogsComponent />;
+    return <BlogsComponent onClickCard={BlogsContainer.onClickCard} />;
   }
 }
 
-export const BlogsContainer = Container;
