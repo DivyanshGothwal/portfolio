@@ -32,7 +32,8 @@ export const qualifications = [
         to: 'Present',
         heading: 'Associate',
         subHeading: 'Goldman Sachs',
-        about: ['Lorem ipsum dolor sit amsadasdet consectetur, adipisicing elit. Quas, magni mollitia, aspernatur consequatur accusamus vero eum facere exercitationem velit suscipit ipsam placeat libero. Deleniti exercitationem nostrum quasi. Molestiae, vel porro.'],
+        about: ['● Working as a full-stack developer for a platform team in GS.',
+          '● Wrote Platform(Data Quality product) UI + backend from scratch with the latest tech stack like React, Redux, Java, spring boot, etc.'],
       },
       {
         from: 'Aug 2018',
