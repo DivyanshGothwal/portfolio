@@ -53,9 +53,10 @@ function Component({ isLarge, isExtraLarge }: InfoComponentProps) {
             </Typography>
           </Typography>
           <Typography>
-            Passionate full-stack engineer with 5.5+ years of hands-on
+            Passionate full-stack engineer with 6 years of hands-on
             experience in developing scalable websites/applications using
-            wide range of front-end and back-end skills like HTML, CSS3, JAVA, JavaScript.
+            wide range of front-end and back-end skills like HTML, JavaScript,
+            Typescript, React, CSS, JAVA.
             Developed 8+ application in my experience.
           </Typography>
         </CustomGrid>
@@ -105,7 +106,7 @@ function Component({ isLarge, isExtraLarge }: InfoComponentProps) {
             Bengaluru, India
           </Typography>
         </CustomGrid>
-        <CustomGrid className="mb-2 d-flex mb-3">
+        {/* <CustomGrid className="mb-2 d-flex mb-3">
           <Typography variant="subtitle1" className="fw-700 about_component__info_text">
             Freelance
           </Typography>
@@ -113,7 +114,7 @@ function Component({ isLarge, isExtraLarge }: InfoComponentProps) {
             <b>: </b>
             Available
           </Typography>
-        </CustomGrid>
+        </CustomGrid> */}
         <Button variant="outlined" color="primary">
           Download CV
         </Button>

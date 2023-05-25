@@ -41,7 +41,7 @@ export function ServicesComponent() {
           key={text}
         >
           <Card
-            className="py-2 mb-2 mr-2 about_component__service__card_container"
+            className="py-2 mb-2 mr-2 h-100 about_component__service__card_container"
             style={{
               background: colors.grey?.[200],
             }}

@@ -142,7 +142,7 @@ function SideBar({
         <Typography
           className="w-100 border-top-solid py-2 d-flex justify-content-center"
         >
-          © 2022&nbsp;
+          © 2023&nbsp;
           <Typography component="span" className="fw-700">
             Divyansh Gothwal
           </Typography>

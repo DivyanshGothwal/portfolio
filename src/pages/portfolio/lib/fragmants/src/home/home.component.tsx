@@ -79,10 +79,10 @@ const particleOptions: ISourceOptions = {
 };
 
 interface HomeComponentProp {
-  onClickFacebook: () =>void;
-  onClickTwitter: () =>void;
-  onClickGithub: () =>void;
-  onClickLinkedIn: () =>void;
+  onClickFacebook: () => void;
+  onClickTwitter: () => void;
+  onClickGithub: () => void;
+  onClickLinkedIn: () => void;
 }
 
 export class HomeComponent extends PureComponent<HomeComponentProp> {
@@ -114,9 +114,10 @@ export class HomeComponent extends PureComponent<HomeComponentProp> {
                   </Typography>
                 </Typography>
                 <Typography className="text-align-center animate__animated animate__zoomInDown">
-                  Passionate full-stack engineer with 5.5+ years of hands-on
+                  Passionate full-stack engineer with 6 years of hands-on
                   experience in developing scalable websites/applications using
-                  wide range of front-end and back-end skills like HTML, CSS3, JAVA, JavaScript.
+                  wide range of front-end and back-end skills like HTML, JavaScript,
+                  Typescript, React, CSS, JAVA.
                   Developed 8+ application in my experience.
                 </Typography>
               </div>
