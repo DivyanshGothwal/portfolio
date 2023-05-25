@@ -2,6 +2,7 @@ import { IconButton, Typography } from '@material-ui/core';
 import FacebookOutlinedIcon from '@mui/icons-material/FacebookOutlined';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import LogoDevIcon from '@mui/icons-material/LogoDev';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import Grid from '@mui/material/Grid';
 import { Particle } from '@portfolio/component';
@@ -83,11 +84,16 @@ interface HomeComponentProp {
   onClickTwitter: () => void;
   onClickGithub: () => void;
   onClickLinkedIn: () => void;
+  onClickDev: () => void;
 }
 
 export class HomeComponent extends PureComponent<HomeComponentProp> {
   render() {
-    const { onClickFacebook, onClickTwitter, onClickGithub, onClickLinkedIn } = this.props;
+    const {
+      onClickFacebook, onClickTwitter,
+      onClickGithub, onClickLinkedIn,
+      onClickDev,
+    } = this.props;
     return (
       <>
         <Particle
@@ -159,6 +165,15 @@ export class HomeComponent extends PureComponent<HomeComponentProp> {
                 className="animate__animated animate__fadeInUp"
               >
                 <LinkedInIcon
+                  color="primary"
+                  fontSize="large"
+                />
+              </IconButton>
+              <IconButton
+                onClick={onClickDev}
+                className="animate__animated animate__fadeInUp"
+              >
+                <LogoDevIcon
                   color="primary"
                   fontSize="large"
                 />

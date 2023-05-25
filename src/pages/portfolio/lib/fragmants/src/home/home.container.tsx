@@ -19,6 +19,10 @@ class Container extends PureComponent {
     window.open('https://www.linkedin.com/in/divyansh-gothwal-78822a115/', '_blank')?.focus();
   };
 
+  static onClickDev = () => {
+    window.open('https://dev.to/divyanshgothwal', '_blank')?.focus();
+  };
+
   render() {
     return (
       <HomeComponent
@@ -26,6 +30,7 @@ class Container extends PureComponent {
         onClickTwitter={Container.onClickTwitter}
         onClickGithub={Container.onClickGithub}
         onClickLinkedIn={Container.onClickLinkedIn}
+        onClickDev={Container.onClickDev}
       />
     );
   }
