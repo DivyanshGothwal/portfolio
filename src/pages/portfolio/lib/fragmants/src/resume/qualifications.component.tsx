@@ -5,8 +5,6 @@ import { qualifications } from './constants/resume.constants';
 import { QualificationComponent } from './qualification.component';
 import './styles/qualification.styles.css';
 
-const Test = require('../../../../../../static/images/about_pic.jpg');
-
 export function QualificationsComponent() {
   return (
     <CustomGrid container>

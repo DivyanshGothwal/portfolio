@@ -7,8 +7,6 @@ import React from 'react';
 import { services } from './constants/about.constants';
 import './styles/about.component.styles.css';
 
-const Test = require('../../../../../../static/images/about_pic.jpg');
-
 export function ServicesComponent() {
   return (
     <CustomGrid

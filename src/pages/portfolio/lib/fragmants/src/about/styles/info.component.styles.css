@@ -1,0 +1,12 @@
+.info__about_pic__div {
+  background-size: cover;
+}
+
+.info__about_pic__img {
+  opacity: 0;
+  transition: opacity 200ms ease-in-out;
+}
+
+.info__about_pic__img.load {
+  opacity: 1;
+}

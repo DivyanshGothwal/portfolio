@@ -11,7 +11,7 @@ import { withRouter } from '../with-router/with-router.component';
 import { SideBarHamBurgerComponent } from './side-bar-ham-burger.component';
 import './styles/side-bar-component.styles.css';
 
-const Test = require('../../../static/images/avatar_pic.jpg');
+const AvatarPic = require('../../../static/images/avatar_pic.jpg');
 
 const drawerWidth = 240;
 
@@ -120,7 +120,7 @@ function SideBar({
         >
           <Avatar
             alt="Divyansh Gothwal"
-            src={Test}
+            src={AvatarPic}
             className="border-solid-2 side_drawer__avatar"
           >
             DG

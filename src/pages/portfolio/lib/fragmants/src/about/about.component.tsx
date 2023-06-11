@@ -1,10 +1,8 @@
-import { CustomGrid, MediaQueryProps } from '@portfolio/component';
+import { CustomGrid } from '@portfolio/component';
 import React from 'react';
 import { InfoComponent } from './info.component';
 import { ServicesComponent } from './services.component';
 import './styles/about.component.styles.css';
-
-type AboutComponentProps = MediaQueryProps;
 
 export function AboutComponent() {
   return (

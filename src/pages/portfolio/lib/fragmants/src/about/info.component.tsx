@@ -1,12 +1,29 @@
 import { Button, Typography } from '@material-ui/core';
 import { CustomGrid, HeaderComponent, MediaQueryProps, withMediaQueries } from '@portfolio/component';
-import React from 'react';
+import React, { useCallback, useEffect, useRef } from 'react';
+import './styles/info.component.styles.css';
 
-const Test = require('../../../../../../static/images/about_pic.jpg');
+const AboutPic = require('../../../../../../static/images/about_pic.webp');
+const AboutPicWithLessResolution = require('../../../../../../static/images/about_pic_low_res.webp');
 
 type InfoComponentProps = MediaQueryProps;
 
 function Component({ isLarge, isExtraLarge }: InfoComponentProps) {
+  const imageRef = useRef<HTMLImageElement>(null);
+
+  const addAnimationToUnloadedImage = useCallback(() => {
+    if (imageRef.current) {
+      imageRef.current.classList.add('load');
+    }
+  }, []);
+
+  useEffect(() => {
+    imageRef.current?.addEventListener('load', addAnimationToUnloadedImage);
+    return () => {
+      imageRef.current?.removeEventListener('load', addAnimationToUnloadedImage);
+    };
+  }, []);
+
   return (
     <CustomGrid
       container
@@ -34,7 +51,19 @@ function Component({ isLarge, isExtraLarge }: InfoComponentProps) {
         sm={12}
         xs={12}
       >
-        <img src={Test} alt="DG" width="100%" />
+        <div
+          className="info__about_pic__div h-100"
+          style={{
+            backgroundImage: `url(${AboutPicWithLessResolution})`,
+          }}
+        >
+          <img
+            ref={imageRef}
+            src={`${AboutPic}`}
+            alt="DG"
+            className="w-100 h-100 info__about_pic__img"
+          />
+        </div>
       </CustomGrid>
       <CustomGrid
         item

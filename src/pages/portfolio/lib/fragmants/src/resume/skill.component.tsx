@@ -1,14 +1,12 @@
 import { LinearProgress, Typography } from '@material-ui/core';
 import React from 'react';
 
-const Test = require('../../../../../../static/images/about_pic.jpg');
-
 interface SkillComponentProp {
   text: string;
-  progressBar:{
+  progressBar: {
     value: number;
   };
-  classes?:{
+  classes?: {
     root?: string;
   }
 }

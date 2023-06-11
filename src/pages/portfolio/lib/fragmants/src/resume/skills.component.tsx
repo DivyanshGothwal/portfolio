@@ -3,8 +3,6 @@ import React from 'react';
 import { skills } from './constants/resume.constants';
 import { SkillComponent } from './skill.component';
 
-const Test = require('../../../../../../static/images/about_pic.jpg');
-
 export function SkillsComponent() {
   return (
     <CustomGrid

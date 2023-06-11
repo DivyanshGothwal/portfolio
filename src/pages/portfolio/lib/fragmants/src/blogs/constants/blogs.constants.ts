@@ -21,4 +21,14 @@ export const blogs = [{
   imageUrl: 'https://res.cloudinary.com/practicaldev/image/fetch/s--smeI3Sr6--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/enosqea7uzg5f0klc5jh.png',
   heading: 'SetTimeout Gotchas with React Hooks',
   content: 'In this article we are going to understand Gotchas of using SetTimeout callback function to update state.',
+}, {
+  link: 'https://dev.to/divyanshgothwal/polyfill-for-reactdomrender-551n',
+  postedOn: {
+    date: '10',
+    month: 'June',
+    year: '2023',
+  },
+  imageUrl: 'https://res.cloudinary.com/practicaldev/image/fetch/s--B36FmNtI--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/hxjmqwtvp77dag2j3x8p.png',
+  heading: 'Polyfill for ReactDOM.render',
+  content: 'In this article we are going to build a polyfill for ReacDOM.render() before react18 or ReactDOM.createRoot({domElement}).render({reactElement})',
 }];
